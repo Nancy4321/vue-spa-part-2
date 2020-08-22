@@ -6,7 +6,7 @@
       :per="10"
       tag="div"
     >
-      <section v-for="blog in paginated('blogs')">
+      <section v-for="blog in paginated('blogs')" :key='blog.name'>
         <h2>{{ blog.title }}</h2>
         <router-link :to="'/post/' + blog.id" class="btn btn-primary">read more</router-link>
         <hr>
